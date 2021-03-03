@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import DeleteRoot from "./DeleteRoot";
+import UpdateRoot from "./UpdateRoot";
 
 function Root({ match }) {
   const [root, setRoot] = useState("");
@@ -12,7 +14,6 @@ function Root({ match }) {
     const result = await axios.get(`${url}/${match.params.id}`);
     setRoot(result.data);
     setShowRoot(true);
-    console.log(result.data);
   }
 
   // on page load grab the specific project
@@ -45,10 +46,14 @@ function Root({ match }) {
               </a>
             );
           })}
+          <a href={`/addblog`}> author a blog </a>
+          <UpdateRoot id={root.id} />
+          <DeleteRoot id={root.id} />
         </div>
       </>
     );
   }
+
   return <div></div>;
 }
 

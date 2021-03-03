@@ -5,6 +5,7 @@ import { Route, Router, Link } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Searchbar from "./components/Searchbar";
 import RootGallery from "./components/RootGallery";
+import AddBlog from "./components/AddBlog.jsx";
 import Root from "./components/Root";
 import Blog from "./components/Blog";
 import Footer from "./components/Footer";
@@ -18,7 +19,8 @@ function App() {
         <RootGallery />
       </Route>
       <Route path="/root/:id" component={Root} />
-      <Route path="/blog/:id" component={Blog} />
+      <Route path="/root/blog/:id" component={Blog} />
+      <Route path="/addblog" component={AddBlog} />
 
       <Footer />
     </>
