@@ -5,6 +5,7 @@ import { Route, Router, Link } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Searchbar from "./components/Searchbar";
 import RootGallery from "./components/RootGallery";
+import BlogGallery from "./components/BlogGallery.jsx";
 import AddBlog from "./components/AddBlog.jsx";
 import AddRoot from "./components/AddRoot.jsx";
 import Root from "./components/Root";
@@ -16,11 +17,12 @@ function App() {
     <>
       <Navbar />
       <Route exact path="/">
-        <Searchbar />
         <RootGallery />
       </Route>
       <Route path="/root/:id" component={Root} />
+      <Route path="/blog/:id" component={Blog} />
       <Route path="/root/blog/:id" component={Blog} />
+      <Route path="/blogs" component={BlogGallery} />
       <Route path="/addblog" component={AddBlog} />
       <Route path="/addroot" component={AddRoot} />
 

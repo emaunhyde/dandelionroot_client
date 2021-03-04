@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import DeleteComment from "./DeleteComment";
 
 function Blog({ match }) {
   const [blog, setBlog] = useState(null);
@@ -20,21 +21,28 @@ function Blog({ match }) {
   if (showBlog === true) {
     return (
       <>
-        <img src={blog.photo_url} alt="blog post" />
-        <h4>{blog.title}</h4>
-        <h5>written by {blog.written_by.username}</h5>
-        <h7>{blog.byline}</h7>
-        <p>{blog.body}</p>
-        <div className="commentsection">
-          {blog.comments.map((e) => {
-            return (
-              <li key={e.id}>
-                <h4>{e.author}</h4>
-                <p>{e.body}</p>
-                <p>Created at : {e.created_at}</p>
-              </li>
-            );
-          })}
+        <div className="blog-page">
+          <h1>{blog.title}</h1>
+          <h3>{blog.byline}</h3>
+          <h5>written by {blog.written_by.username}</h5>
+          <div className="blog-photo">
+            <img src={blog.photo_url} alt="blog post" />
+          </div>
+          <p>{blog.body}</p>
+          <div className="commentsection">
+            {blog.comments.map((e) => {
+              return (
+                <div className="comment-list">
+                  <div className="comments">
+                    <p>{e.body}</p>
+                    <h4>Written by : {e.author}</h4>
+                    <h6>Created at : {e.created_at}</h6>
+                  </div>
+                  <DeleteComment id={e.id} />
+                </div>
+              );
+            })}
+          </div>
         </div>
       </>
     );

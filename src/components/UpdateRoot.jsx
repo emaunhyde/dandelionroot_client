@@ -9,7 +9,7 @@ function UpdateRoot({ id }) {
   }
 
   if (updateRoot === false) {
-    return <button onClick={handleUpdate}>update</button>;
+    return <button onClick={handleUpdate}>update root</button>;
   } else {
     return <UpdateRootForm setUpdatedRoot={setUpdatedRoot} id={id} />;
   }

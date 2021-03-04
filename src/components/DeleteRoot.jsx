@@ -7,11 +7,7 @@ function DeleteRoot({ id }) {
   function deleteRoot() {
     axios.delete(`${url}/${id}`);
   }
-  return (
-    <div>
-      <button onClick={deleteRoot}>delete</button>
-    </div>
-  );
+  return <button onClick={deleteRoot}>delete root</button>;
 }
 
 export default DeleteRoot;
