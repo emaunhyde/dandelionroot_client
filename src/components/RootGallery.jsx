@@ -5,7 +5,7 @@ import RootGalleryCards from "./RootGalleryCards";
 function RootGallery() {
   const [roots, setRoots] = useState("");
   const [grabComplete, setGrabComplete] = useState(false);
-  const url = "http://ancient-reef-46417.herokuapp.com/roots/";
+  const url = "https://ancient-reef-46417.herokuapp.com/roots/";
 
   // api searcher function
   async function getResults() {

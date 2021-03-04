@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 
 function DeleteComment({ id }) {
-  const url = "http://ancient-reef-46417.herokuapp.com/comments";
+  const url = "https://ancient-reef-46417.herokuapp.com/comments";
 
   function deleteComment() {
     axios.delete(`${url}/${id}`);

@@ -5,7 +5,7 @@ function AddBlog() {
   // fetch api post link and set state
 
   // const url = "https://ancient-reef-46417.herokuapp.com/blogs/";
-  const url = "http://localhost:8000/blogs/";
+  const url = "https://localhost:8000/blogs/";
 
   const [formState, setFormState] = useState(null);
 

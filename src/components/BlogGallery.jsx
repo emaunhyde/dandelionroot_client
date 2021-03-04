@@ -10,7 +10,7 @@ import BlogGalleryCards from "./BlogGalleryCards";
 function BlogGallery() {
   const [blogs, setBlogs] = useState("");
   const [grabComplete, setGrabComplete] = useState(false);
-  const url = "http://ancient-reef-46417.herokuapp.com/blogs/";
+  const url = "https://ancient-reef-46417.herokuapp.com/blogs/";
 
   // api searcher function
   async function getResults() {

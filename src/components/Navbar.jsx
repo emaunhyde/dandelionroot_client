@@ -1,5 +1,5 @@
 import React from "react";
-import Banner from "../media/DR_landing.jpg";
+import Banner from "../media/DR_landing.png";
 import { Link } from "react-router-dom";
 
 function Navbar(props) {

@@ -6,7 +6,7 @@ import UpdateRoot from "./UpdateRoot";
 function Root({ match }) {
   const [root, setRoot] = useState("");
   const [showRoot, setShowRoot] = useState(false);
-  const url = "http://ancient-reef-46417.herokuapp.com/roots";
+  const url = "https://ancient-reef-46417.herokuapp.com/roots";
 
   // GET specific project from api
 
